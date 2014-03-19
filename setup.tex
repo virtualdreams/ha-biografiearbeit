@@ -9,16 +9,16 @@
 %%% Schriftart, Kodierung und Sprache
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage{ngerman}
 \usepackage[ngerman]{babel}
 
 %%% Schriftart
 %\usepackage{ae}
 \usepackage{times}
 
-%%%
+%%% Space :)
 \usepackage{setspace}
 
+%%% Multirow in Tabellen (miktex only?)
 \usepackage{multirow}
 
 %%% Grapfikpaket
@@ -41,24 +41,28 @@
 %\usepackage{amsfonts}
 %\usepackage{amssymb}
 
+%%% Listen
 \usepackage{enumerate}
 \usepackage{listings}
 
+%%% Listeneinträge sollen alle mit Bullets anfangen
 \renewcommand{\labelitemi}{$\bullet$}
 \renewcommand{\labelitemii}{$\bullet$}
 \renewcommand{\labelitemiii}{$\bullet$}
 \renewcommand{\labelitemiv}{$\bullet$}
 
-
+%%% Für Programm/Code Listings
 \renewcommand{\lstlistingname}{Programm}
 
+%%% Gepunktete Linie im Inhaltsverzeichnis entfernen
 \usepackage[titles]{tocloft}
 \renewcommand{\cftdot}{}
 
-%%% Randnotizen
+%%% (Kleinere) Randnotizen
 \usepackage{marginnote}
 \renewcommand*{\marginfont}{\footnotesize}
 
+%%% Farbenkram
 %\usepackage{color}
 
 %%% Gedichte
@@ -66,6 +70,17 @@
 
 %%% PDF Hyperlinks
 \usepackage[ngerman,plainpages=false,pdfpagelabels]{hyperref}
+
+%%% biblatex (Quellenverz)
+%%% mehr unter http://biblatex.dominik-wassenhoven.de/download/DTK-2_2008-biblatex-Teil1.pdf
+%%% benutze biber.exe anstelle von bibtex.exe (miktex)
+\usepackage[backend=biber,bibencoding=utf8,style=authortitle-icomp,bibstyle=numeric,pagetracker=false,isbn=false]{biblatex}
+\usepackage[babel,german=quotes]{csquotes}
+\setlength{\bibitemsep}{1em}
+
+%%% Das Quellenverz. z.B. mit JabRef erstellt. 
+\bibliography{bibliography}
+%\addbibresource{bibliography.bib}
 
 %%% Zeilenabstand 1,5
 \onehalfspacing
