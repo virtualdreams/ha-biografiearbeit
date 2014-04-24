@@ -74,7 +74,15 @@
 %%% biblatex (Quellenverz)
 %%% mehr unter http://biblatex.dominik-wassenhoven.de/download/DTK-2_2008-biblatex-Teil1.pdf
 %%% benutze biber.exe anstelle von bibtex.exe (miktex)
-\usepackage[backend=biber,bibencoding=utf8,style=authortitle-icomp,bibstyle=numeric,pagetracker=false,isbn=false]{biblatex}
+\usepackage[
+	backend=biber,
+	bibencoding=utf8,
+	style=authortitle-icomp,
+	bibstyle=numeric,
+	% citestyle=authoryear,
+	pagetracker=true,
+	isbn=false
+]{biblatex}
 \usepackage[babel,german=quotes]{csquotes}
 \setlength{\bibitemsep}{1em}
 
